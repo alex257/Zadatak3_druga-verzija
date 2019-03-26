@@ -1,0 +1,14 @@
+@mixin grid($size, $breakpoint) {
+  @media (max-width: $breakpoint) {
+    @for $i from 0 through $columns {
+      .col-#{$size}-#{$i} {
+        flex: 0 0 (100% / $columns) * $i;
+      } 
+    }
+  }
+}
+@include grid("xs", $xs);
+@include grid("sm", $sm);
+@include grid("md", $md);
+@include grid("lg", $lg);
+@include grid("xl", $xl);

@@ -1,0 +1,65 @@
+/* Lora */
+@font-face {
+  font-family: "Lora Regular";
+  font-weight: normal;
+  font-style: normal;
+  src: local("Lora Regular"), local("Lora-Regular"),
+    url("../../fonts/Lora-regular.ttf") format("truetype"),
+    url("../../fonts/lora-regular-webfont.woff2") format("woff2"),
+    url("../../fonts/lora-regular-webfont.woff") format("woff");
+}
+
+/* Lora-italic*/
+@font-face {
+  font-family: "Lora Italic";
+  font-weight: normal;
+  font-style: normal;
+  src: local("Lora Italic"), local("Lora-Italic"),
+    url("../../fonts/Lora-Italic.ttf") format("truetype"),
+    url("../../fonts/lora-italic-webfont.woff2") format("woff2"),
+    url("../../fonts/lora-italic-webfont.woff") format("woff");
+}
+
+/* Lora-bold*/
+@font-face {
+  font-family: "Lora Bold";
+  font-weight: normal;
+  font-style: normal;
+  src: local("Lora-Bold"), local("Lora-Bold"),
+    url("../../fonts/Lora-Bold.ttf") format("truetype"),
+    url("../../fonts/lora-bold-webfont.woff2") format("woff2"),
+    url("../../fonts/lora-bold-webfont.woff") format("woff");
+}
+
+/*Oswald-regular */
+@font-face {
+  font-family: "Oswald Regular";
+  font-weight: normal;
+  font-style: normal;
+  src: local("Oswald"), local("Oswald"),
+    url("../../fonts/Oswald-Regular.ttf") format("truetype"),
+    url("../../fonts/oswald-regular-webfont.woff2") format("woff2"),
+    url("../../fonts/oswald-regular-webfont.woff") format("woff");
+}
+
+/* Oswald-light*/
+@font-face {
+  font-family: "Oswald Light";
+  font-weight: normal;
+  font-style: normal;
+  src: local("Oswald Light"), local("Oswald-Light"),
+    url("../../fonts/Oswald-Light.ttf") format("truetype"),
+    url("../../fonts/oswald-light-webfont.woff2") format("woff2"),
+    url("../../fonts/oswald-light-webfont.woff") format("woff");
+}
+
+/* Oswald-bold*/
+@font-face {
+  font-family: "Oswald Bold";
+  font-weight: normal;
+  font-style: normal;
+  src: local("Oswald Bold"), local("Oswald-Bold"),
+    url("/../../fonts/Oswald-Bold.ttf") format("truetype"),
+    url("../../fonts/oswald-bold-webfont.woff2") format("woff2"),
+    url("../../fonts/oswald-bold-webfont.woff") format("woff");
+}

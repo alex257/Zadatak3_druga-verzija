@@ -1,0 +1,278 @@
+h1,
+h2 {
+  font-family: "Oswald Bold";
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 98px;
+  line-height: 109px;
+
+  @include mQ(1550px) {
+    font-size: 80px;
+    line-height: 100px;
+  }
+  @include mQ($lg) {
+    font-size: 67px;
+    line-height: 95px;
+  }
+  @include mQ($md) {
+    font-size: 55px;
+    line-height: 80px;
+  }
+  @include mQ($sm) {
+    font-size: 45px;
+    line-height: 60px;
+  }
+  @include mQ($xs) {
+    font-size: 40px;
+    line-height: 55px;
+  }
+}
+
+h2 {
+  font-size: 80px;
+  line-height: 119px;
+
+  @include mQ($lg) {
+    font-size: 77px;
+    line-height: 130px;
+  }
+  @include mQ($md) {
+    font-size: 48px;
+    line-height: 120px;
+  }
+  @include mQ($sm) {
+    font-size: 40px;
+    line-height: 115px;
+  }
+  @include mQ($xs) {
+    font-size: 34px;
+  }
+}
+
+h4 {
+  font-family: "Oswald Regular";
+  font-size: 36px;
+  line-height: 75px;
+
+  @include mQ($lg) {
+    font-size: 28px;
+  }
+  @include mQ($md) {
+    font-size: 30px;
+  }
+}
+
+//h5
+
+/*
+
+.music__song-name,
+.music__album-name,
+.music__album,
+.tour__ticket-heading {
+  font-family: "Oswald Light";
+  font-weight: 300;
+  font-size: 30px;
+
+  @include mQ($lg) {
+    font-size: 28px;
+  }
+  @include mQ($md) {
+    font-size: 26px;
+  }
+  @include mQ($sm) {
+    font-size: 22px;
+  }
+  @include mQ($xs) {
+    font-size: 16px;
+  }
+}
+
+.tour__ticket-heading {
+  @include mQ(770px) {
+    font-size: 24px;
+  }
+  @include mQ($sm) {
+    font-size: 20px;
+  }
+  @include mQ(520px) {
+    font-size: 18px;
+  }
+  @include mQ(415px) {
+    font-size: 13px;
+  }
+}
+
+.music__year {
+  font-family: "Oswald Light";
+}
+
+.music__album-name,
+.music__year {
+  @include mQ($md) {
+    font-size: 22px;
+  }
+  @include mQ($xs) {
+    font-size: 12px;
+  }
+}
+
+*/
+
+h6 {
+  font-family: "Lora Italic";
+  color: $accent;
+  font-size: 18px;
+  //line-height: 2;
+  font-weight: 300;
+  text-transform: capitalize;
+  @include mQ($md) {
+    font-size: 16px;
+  }
+}
+
+p {
+  font-family: "Lora Regular";
+  font-size: 19px;
+  line-height: 36px;
+
+  @include mQ($lg) {
+    font-size: 16px;
+  }
+  @include mQ($md) {
+    font-size: 18px;
+  }
+}
+
+//nav
+
+.nav {
+  font-family: "Lora Bold";
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 300;
+  //line-height: 36px;
+  @include mQ($md) {
+    font-size: 15px;
+  }
+  @include mQ($sm) {
+    font-size: 11px;
+  }
+  @include mQ($xs) {
+    font-size: 10px;
+  }
+}
+
+.words {
+  font-family: "Lora Regular";
+  font-size: 14px;
+  //line-height: 36px;
+  //letter-spacing: -0.2px;
+  color: $accent;
+  text-transform: uppercase;
+  margin-bottom: -19px;
+  @include mQ($lg) {
+    font-size: 12px;
+  }
+  @include mQ($md) {
+    font-size: 10px;
+  }
+}
+
+.about__member-list {
+  font-family: "Lora Italic";
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  color: $white;
+  text-transform: uppercase;
+}
+
+.tour {
+  &__day {
+    font-family: "Oswald Bold";
+    font-size: 50px;
+
+    @include mQ(1150px) {
+      font-size: 40px;
+    }
+    @include mQ(615px) {
+      font-size: 30px;
+    }
+    @include mQ(520px) {
+      font-size: 28px;
+    }
+    @include mQ(415px) {
+      font-size: 23px;
+    }
+  }
+
+  &__month,
+  &__year {
+    font-family: "Oswald Bold";
+    font-size: 23px;
+    text-transform: uppercase;
+
+    @include mQ(1150px) {
+      font-size: 18px;
+    }
+    @include mQ(615px) {
+      font-size: 15px;
+    }
+    @include mQ(520px) {
+      font-size: 13px;
+    }
+    @include mQ(415px) {
+      font-size: 11px;
+    }
+  }
+
+  &__dates {
+    font-family: "Lora Bold";
+    font-size: 15px;
+    font-weight: 300;
+    color: $accent;
+    text-transform: uppercase;
+
+    @include mQ($md) {
+      //font-size: 14px;
+    }
+
+    &--past {
+      color: $white;
+    }
+
+    &--city {
+      margin-top: -27px;
+    }
+
+    &--active {
+      color: $black;
+    }
+  }
+}
+
+.footer {
+  label {
+    font-family: "Oswald Bold";
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: $white;
+
+    @include mQ($lg) {
+      font-size: 34px;
+    }
+    @include mQ($md) {
+      font-size: 28px;
+    }
+    @include mQ($sm) {
+      font-size: 24px;
+    }
+    @include mQ($xs) {
+      font-size: 20px;
+    }
+  }
+}

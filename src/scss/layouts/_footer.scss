@@ -1,0 +1,109 @@
+.footer {
+  background-image: url(../../img/contact.jpg);
+  background-color: lighten($accent, 5%);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  height: 965px;
+
+  h2 {
+    &:first-of-type {
+      margin-top: 155px;
+    }
+    &:nth-of-type(2) {
+      margin-top: -90px;
+    }
+  }
+
+  &__dots--mini {
+    span {
+      background-color: $white;
+      display: inline-block;
+      width: 2px;
+      height: 2px;
+      border-radius: 50%;
+      margin-right: 17px;
+      margin-top: -49px;
+      margin-bottom: 40px;
+
+      @include mQ(967px) {
+        margin-right: 10px;
+      }
+      @include mQ(615px) {
+        margin-right: 7px;
+      }
+      @include mQ(470px) {
+        margin-right: 5px;
+      }
+      @include mQ(364px) {
+        margin-right: 4px;
+      }
+    }
+  }
+
+  &__contact-wrapper {
+    @include mQ($sm) {
+      flex-direction: column;
+      //margin-bottom: 20px;
+    }
+  }
+
+  &__input-wrapper {
+    padding: 11px 34px;
+  }
+
+  &__copyright {
+    margin-top: 350px;
+    @include mQ($md) {
+      flex-direction: column;
+    }
+  }
+
+  &__copy {
+    @include mQ($md) {
+      margin-bottom: 20px;
+    }
+  }
+
+  label {
+    margin-right: 15px;
+  }
+
+  input {
+    background-color: transparent;
+    border: 5px solid $black;
+    width: 293px;
+
+    @include mQ($lg) {
+      width: 220px;
+    }
+    @include mQ($md) {
+      width: 200px;
+    }
+    @include mQ($sm) {
+      width: 140px;
+    }
+    @include mQ($xs) {
+      width: 150px;
+    }
+  }
+
+  i {
+    font-size: 60px;
+    padding-right: 30px;
+    padding-left: 63px;
+
+    @include mQ($sm) {
+      margin-top: 50px;
+      font-size: 40px;
+    }
+    @include mQ($xs) {
+      font-size: 30px;
+    }
+
+    &:nth-of-type(2) {
+      padding-left: 4px;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $white;
+  overflow-y: visible;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+}
+.main-wrapper {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.container-full {
+  width: 100%;
+}
+
+.container {
+  //margin: 0 10.789%;
+}
+
+.row {
+  display: flex;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}

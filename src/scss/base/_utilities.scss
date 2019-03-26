@@ -1,0 +1,93 @@
+.d-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.nowrap {
+  flex-wrap: nowrap;
+}
+
+.justify-content-start {
+  justify-content: flex-start;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-around {
+  justify-content: space-around;
+}
+
+/*.justify-content-evenly {
+  justify-content: space-evenly;
+}*/
+
+.align-items-start {
+  align-items: flex-start;
+}
+
+.align-self-center {
+  align-self: center;
+}
+
+.align-items-end {
+  align-items: flex-end;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-baseline {
+  align-items: baseline;
+}
+
+.flex-1 {
+  flex-grow: 1;
+}
+//Background
+
+.bg--dark {
+  background-color: $black;
+}
+
+.dark {
+  color: $black;
+}
+
+.bg--light {
+  background-color: $white;
+}
+
+.light {
+  color: $white;
+}
+
+.accent {
+  color: $accent;
+}
+
+.bg--accent {
+  background-color: $accent;
+}
