@@ -3,7 +3,7 @@
     @for $i from 0 through $columns {
       .col-#{$size}-#{$i} {
         flex: 0 0 (100% / $columns) * $i;
-      } 
+      }
     }
   }
 }

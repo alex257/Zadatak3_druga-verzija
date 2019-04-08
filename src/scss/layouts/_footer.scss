@@ -9,10 +9,10 @@
 
   h2 {
     &:first-of-type {
-      margin-top: 155px;
+      margin-top: 15.5rem;
     }
     &:nth-of-type(2) {
-      margin-top: -90px;
+      margin-top: -9rem;
     }
   }
 
@@ -24,20 +24,47 @@
       height: 2px;
       border-radius: 50%;
       margin-right: 17px;
-      margin-top: -49px;
-      margin-bottom: 40px;
+      margin-top: -4.9rem;
+      margin-bottom: 4rem;
+
+      &:nth-of-type(1),
+      &:nth-of-type(2),
+      &:nth-of-type(3),
+      &:nth-of-type(4),
+      &:nth-of-type(5),
+      &:nth-of-type(6) {
+        @include mQ(410px) {
+          display: none;
+        }
+      }
+
+      @include mQ($md) {
+        margin-right: 12px;
+      }
 
       @include mQ(967px) {
         margin-right: 10px;
       }
-      @include mQ(615px) {
-        margin-right: 7px;
+
+      @include mQ(775px) {
+        margin-right: 8px;
       }
-      @include mQ(470px) {
+
+      @include mQ(675px) {
+        margin-right: 6px;
+      }
+      @include mQ(560px) {
         margin-right: 5px;
       }
-      @include mQ(364px) {
+
+      @include mQ(510px) {
+        width: 1px;
+        height: 1px;
         margin-right: 4px;
+      }
+
+      @include mQ(410px) {
+        margin-right: 3px;
       }
     }
   }
@@ -50,11 +77,11 @@
   }
 
   &__input-wrapper {
-    padding: 11px 34px;
+    padding: 1.1rem 3.4rem;
   }
 
   &__copyright {
-    margin-top: 350px;
+    margin-top: 35rem;
     @include mQ($md) {
       flex-direction: column;
     }
@@ -62,44 +89,44 @@
 
   &__copy {
     @include mQ($md) {
-      margin-bottom: 20px;
+      margin-bottom: 2rem;
     }
   }
 
   label {
-    margin-right: 15px;
+    margin-right: 1.5rem;
   }
 
   input {
     background-color: transparent;
     border: 5px solid $black;
-    width: 293px;
+    width: 29.3rem;
 
     @include mQ($lg) {
-      width: 220px;
+      width: 22rem;
     }
     @include mQ($md) {
-      width: 200px;
+      width: 20rem;
     }
     @include mQ($sm) {
-      width: 140px;
+      width: 14rem;
     }
     @include mQ($xs) {
-      width: 150px;
+      width: 15rem;
     }
   }
 
   i {
-    font-size: 60px;
-    padding-right: 30px;
-    padding-left: 63px;
+    font-size: 6rem;
+    padding-right: 3rem;
+    padding-left: 6.3rem;
 
     @include mQ($sm) {
-      margin-top: 50px;
-      font-size: 40px;
+      margin-top: 5rem;
+      font-size: 4rem;
     }
     @include mQ($xs) {
-      font-size: 30px;
+      font-size: 3rem;
     }
 
     &:nth-of-type(2) {

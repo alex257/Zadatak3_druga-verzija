@@ -1,6 +1,373 @@
 .music {
   background-color: $bg--music;
+  padding-top: 10rem;
+  //height: 100vh;
 
-  
-  
+  @include mQ($lg) {
+    padding-top: 0;
+  }
+
+  &__wrapper {
+    @include mQ($lg) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__image-wrapper {
+    @include mQ($lg) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__image {
+    //margin-top: 101px;
+    width: auto;
+    margin-left: -5.4rem;
+    margin-bottom: 3.7rem;
+    display: block;
+
+    @include mQ(1700px) {
+      margin-left: -8.4rem;
+    }
+
+    @include mQ(1500px) {
+      margin-left: -12.4rem;
+    }
+
+    @include mQ($lg) {
+      margin-left: 0px;
+      margin-top: 5rem;
+      display: flex;
+    }
+  }
+
+  &__discography {
+    @include mQ($lg) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__albums-wrapper {
+    display: table;
+    @include mQ($lg) {
+      //margin-left: 10rem;
+    }
+    @include mQ($sm) {
+      //margin-left: 0rem;
+    }
+  }
+
+  &__album {
+    display: table-row;
+    padding-bottom: 35px;
+
+    & > div {
+      display: table-cell;
+      padding-right: 20px;
+      padding-top: 40px;
+
+      @include mQ($sm) {
+        padding-right: 10px;
+      }
+
+      &:nth-of-type(3) {
+        padding-right: 45px;
+        @include mQ($sm) {
+          padding-right: 20px;
+        }
+      }
+
+      &:nth-of-type(4) {
+        padding-right: 30px;
+      }
+    }
+  }
+
+  &__year {
+    //margin-right: 40px;
+  }
+
+  &__now-playing {
+    margin-top: -10rem;
+    margin-left: 10rem;
+
+    @include mQ(1500px) {
+      margin-left: 5rem;
+    }
+
+    @include mQ($lg) {
+      margin-left: 10rem;
+    }
+
+    @include mQ($md) {
+      margin-left: 0rem;
+    }
+
+    @include mQ($sm) {
+      margin-left: 0rem;
+    }
+  }
+
+  &__heading {
+    font-weight: 300;
+
+    &--first {
+      margin-top: 16px;
+      margin-bottom: -9px;
+
+      @include mQ($lg) {
+        display: none;
+      }
+    }
+
+    &--second {
+      margin-top: 10.8rem;
+      //margin-bottom: -30px;
+
+      @include mQ($lg) {
+        margin-top: 15rem;
+      }
+    }
+
+    /*@include mQ($md) {
+      margin-top: 50px;
+      margin-bottom: 48px;
+    }*/
+  }
+
+  &__player {
+    margin-top: 43px;
+
+    @include mQ($md) {
+      //
+    }
+  }
+
+  &__range-value {
+  }
+
+  &__slider {
+    -webkit-appearance: none;
+    //width: 100%;
+    width: 63.5rem;
+    height: 8px;
+    border-radius: 5px;
+    margin-top: -8rem;
+    background: $accent;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+
+    @include mQ(1700px) {
+      width: 43.5rem;
+    }
+
+    @include mQ($lg) {
+      width: 63.5rem;
+      margin-top: -13rem;
+    }
+
+    @include mQ($md) {
+      //width: 43.5rem;
+      margin-top: 2rem;
+    }
+
+    @include mQ($sm) {
+      width: 32rem;
+      height: 5px;
+    }
+
+    @include mQ($xs) {
+      width: 29rem;
+      height: 5px;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: $accent;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    @include mQ($md) {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  &__slider::-moz-range-thumb {
+    background: $accent;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    @include mQ($md) {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  &__icons {
+    color: $white;
+    justify-content: space-evenly;
+    margin-top: -6px;
+    margin-bottom: 7px;
+
+    @include mQ($md) {
+      margin-left: -10rem;
+      margin-top: 1rem;
+    }
+  }
+
+  .material-icons {
+    font-size: 74px;
+
+    @include mQ($lg) {
+      font-size: 68px;
+    }
+    @include mQ($md) {
+      font-size: 50px;
+    }
+  }
+
+  &__dot {
+    width: 16px;
+    height: 16px;
+    background-color: $white;
+    border-radius: 50%;
+    margin-left: 15px;
+    margin-right: 20px;
+
+    @include mQ($md) {
+      width: 14px;
+      height: 14px;
+    }
+    @include mQ($sm) {
+      display: none;
+      width: 9px;
+      height: 9px;
+    }
+  }
+
+  &__song-wrapper {
+    margin-left: 6.4rem;
+    padding-top: 6.7rem;
+    margin-bottom: 10rem;
+
+    @include mQ(1500px) {
+      margin-left: 5rem;
+    }
+
+    @include mQ($lg) {
+      margin-left: 10rem;
+    }
+
+    @include mQ($md) {
+      margin-left: 0rem;
+    }
+  }
+
+  &__songs {
+    display: table;
+  }
+
+  &__song {
+    margin-bottom: -7rem;
+    display: table-row;
+    & > div {
+      display: table-cell;
+      padding-top: 1.2rem;
+
+      &:nth-of-type(2) {
+        padding-right: 10.5rem;
+        padding-top: 0.8rem;
+      }
+
+      &:nth-of-type(3) {
+        padding-right: 2.8rem;
+      }
+    }
+  }
+
+  &__song-name {
+    &--first {
+      margin-top: -2.8rem;
+      margin-bottom: -2.5rem;
+    }
+
+    &--second {
+      margin-top: 4.3rem;
+      margin-bottom: 1.7rem;
+    }
+  }
+
+  &__song-number--active {
+    margin-top: 3.9rem;
+    margin-bottom: -1.6rem;
+  }
+
+  &__triangle {
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-left: 14px solid $white;
+    border-right: 14px solid transparent;
+    display: inline-block;
+    margin-right: 6px;
+    &--active {
+      border-left-color: $accent;
+    }
+  }
+
+  &__dots--mini {
+  }
+  span {
+    width: 1px;
+    height: 1px;
+    background-color: $accent;
+    display: inline-block;
+    margin-right: 5px;
+
+    .hidden {
+      @include mQ($lg) {
+        display: none;
+      }
+    }
+
+    @include mQ(1700px) {
+      display: none;
+    }
+
+    @include mQ($lg) {
+      display: inline-block;
+    }
+
+    @include mQ($md) {
+      margin-right: 4px;
+    }
+
+    @include mQ(900px) {
+      display: none;
+    }
+  }
+
+  &__duration {
+    @include mQ($sm) {
+      display: none;
+    }
+  }
 }

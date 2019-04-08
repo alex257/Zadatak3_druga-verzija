@@ -2,8 +2,213 @@
   background: url(../../img/guitar.jpg) no-repeat;
   background-position: center;
   background-size: cover;
-  height: 950px;
+  height: 100vh;
+  position: relative;
 
-  
-  
+  &__nav {
+    padding-top: 7.8rem;
+
+    @include mQ($md) {
+      display: none;
+    }
+
+    ul {
+      li {
+        a {
+          color: $black;
+        }
+      }
+    }
+  }
+
+  &__dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: $accent;
+    align-self: center;
+    margin: 4px 7px;
+  }
+
+  &__words {
+    margin-left: 103.9rem;
+    position: relative;
+    margin-top: -11.4rem;
+    //margin-bottom: -1.9rem;
+
+    @include mQ(1600px) {
+      margin-left: 87.3rem;
+      margin-top: -19rem;
+    }
+
+    @include mQ(1450px) {
+      margin-left: 80.3rem;
+      //margin-top: -19rem;
+    }
+
+    @include mQ(1350px) {
+      margin-left: 69.3rem;
+    }
+
+    @include mQ(1200px) {
+      margin-left: 62.5rem;
+    }
+
+    @include mQ($md) {
+      margin-left: 38rem;
+      margin-top: 0;
+      position: static;
+    }
+
+    @include mQ(930px) {
+      margin-left: 22.5rem;
+    }
+
+    &--first {
+      margin-top: 25.4rem;
+      padding-left: 1.5rem;
+      padding-right: 2.5rem;
+      @include mQ($md) {
+        opacity: 0;
+      }
+    }
+
+    &--second {
+      margin-top: 16.5rem;
+      padding-right: 2.5rem;
+      @include mQ($md) {
+        opacity: 0;
+      }
+      @include mQ($sm) {
+        display: none;
+      }
+    }
+
+    &--third {
+      margin-top: 22.5rem;
+      padding-right: 2.5rem;
+
+      @include mQ($md) {
+        margin-top: 12rem;
+        margin-left: 6rem;
+      }
+
+      @include mQ(790px) {
+        margin-left: 7rem;
+      }
+      @include mQ($sm) {
+        display: none;
+      }
+    }
+
+    &--fourth {
+      margin-top: 25.5rem;
+    }
+  }
+
+  &__words--hidden {
+    @include mQ($md) {
+      display: none;
+    }
+  }
+
+  &__heading-wrapper {
+    @include mQ($md) {
+      position: relative;
+      left: -60%;
+    }
+    @include mQ(890px) {
+      left: -50%;
+    }
+  }
+
+  &__heading {
+    position: absolute;
+    top: 30.5rem;
+    left: -1rem;
+
+    @include mQ($md) {
+      @include centered;
+    }
+
+    @include mQ($sm) {
+      //flex-direction: row;
+      left: 8rem;
+    }
+
+    @include mQ(490px) {
+      left: -7rem;
+    }
+
+    span {
+      @include mQ(1000px) {
+        //margin: 0;
+        color: $white;
+      }
+
+      &:nth-of-type(1) {
+        align-self: center;
+
+        @include mQ($md) {
+          margin-right: 1rem;
+          //color: $black;
+        }
+      }
+
+      &:nth-of-type(2) {
+        @include mQ($md) {
+          margin-right: 1rem;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  &__menu-hover {
+    li {
+      margin-right: 2.5rem;
+      transform: rotate(180deg);
+
+      @include mQ($md) {
+        display: none;
+      }
+
+      &:nth-child(3) {
+        margin-right: 3rem;
+      }
+
+      &:nth-child(4) {
+        margin-right: 3.5rem;
+      }
+
+      span {
+        display: inline-block;
+        background: $accent;
+        margin-right: -1px;
+
+        &:nth-child(3),
+        &:nth-child(5),
+        &:nth-child(7) {
+          height: 11px;
+          width: 5px;
+        }
+
+        &:nth-child(1),
+        &:nth-child(4),
+        &:nth-child(8) {
+          height: 7px;
+          width: 5px;
+        }
+        &:nth-child(2),
+        &:nth-child(6) {
+          height: 17px;
+          width: 5px;
+        }
+      }
+    }
+  }
+
+  &__hidden {
+    display: none;
+  }
 }

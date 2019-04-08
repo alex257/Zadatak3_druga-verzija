@@ -11,15 +11,11 @@ terser = require("gulp-terser");
 minify = require("gulp-minify");
 //gulpCopy = require('gulp-copy');
 
-//sourceFiles = ('src/index.html');
-//destination = 'dest/';
-//outputPath = 'some-other-dest/';
 
 function style() {
   return gulp
-    .src("src/scss/**/*.scss", {
-      sourcemaps: true
-    })
+    .src("src/scss/**/*.scss")
+    .pipe(sourcemaps.init())
 
     .pipe(sass().on("error", sass.logError))
 
@@ -31,7 +27,7 @@ function style() {
     )
 
     .pipe(cleanCSS())
-
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest("src/css"))
 
     .pipe(browserSync.stream());
@@ -40,9 +36,12 @@ function style() {
 function es() {
   return gulp
     .src("src/js/**/*.js")
+    .pipe(sourcemaps.init())
     .pipe(terser())
+    .pipe(sourcemaps.write())
     .pipe(minify())
-    .pipe(gulp.dest("src/js"));
+
+    .pipe(gulp.dest("dist/js"));
 }
 
 /*function copyHtml(){
@@ -71,12 +70,14 @@ function copyFonts() {
 }
 
 function copyCss() {
-  return gulp.src("src/css/*.css").pipe(gulp.dest("dist/css"));
+  return gulp.src("src/css/*.css").pipe(gulp.dest("dist/css"))
+  .pipe(browserSync.stream());
 }
 
+/*
 function copyJs() {
   return gulp.src("src/js/main-min.js").pipe(gulp.dest("dist/js"));
-}
+}*/
 
 function watch() {
   browserSync.init({
@@ -90,7 +91,7 @@ function watch() {
   gulp.watch("src/fonts/*.{txt,woff,woff2,ttf}", copyFonts);
   gulp.watch("src/css/*.css", copyCss);
   gulp.watch("src/js/*.js").on("change", browserSync.reload);
-  gulp.watch("src/js/main-min.js", copyJs);
+  //gulp.watch("src/js/main-min.js", copyJs);
 }
 
 exports.style = style;
@@ -100,7 +101,7 @@ exports.copyHtml = copyHtml;
 exports.copyImages = copyImages;
 exports.copyFonts = copyFonts;
 exports.copyCss = copyCss;
-exports.copyJs = copyJs;
+//exports.copyJs = copyJs;
 
 // exports.default = build;
 
@@ -112,7 +113,7 @@ const build = gulp.parallel(
   copyImages,
   copyFonts,
   copyCss,
-  copyJs
+  //copyJs
 );
 
 gulp.task(build);
