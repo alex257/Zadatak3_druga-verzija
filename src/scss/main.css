@@ -960,6 +960,12 @@ h1 {
   }
 }
 
+@media only screen and (max-width: 1400px) {
+  .about__name--big {
+    font-size: 6.3rem;
+  }
+}
+
 h2 {
   font-size: 8rem;
   line-height: 1.48;
@@ -1128,9 +1134,9 @@ p {
   line-height: 2;
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1300px) {
   p {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
   }
 }
 
@@ -1929,7 +1935,7 @@ p {
 
 @media only screen and (max-width: 1400px) {
   .about__name--big {
-    bottom: 5%;
+    bottom: 10%;
   }
 }
 
@@ -2163,7 +2169,7 @@ p {
 
 @media only screen and (max-width: 1400px) {
   .about__member-text {
-    margin: 0 8rem;
+    margin: 0 9rem;
   }
 }
 
@@ -3171,22 +3177,19 @@ p {
 
 .navigation__checkbox {
   display: none;
-}
+  /*    &:checked + &__button &__icon {
+      background-color: transparent;
+    }
 
-.navigation__checkbox:checked + .navigation__checkbox__button .navigation__checkbox__icon {
-  background-color: transparent;
-}
+    &:checked + &__button &__icon:before {
+      top: 0;
+      transform: rotate(135deg);
+    }
 
-.navigation__checkbox:checked + .navigation__checkbox__button .navigation__checkbox__icon:before {
-  top: 0;
-  -webkit-transform: rotate(135deg);
-          transform: rotate(135deg);
-}
-
-.navigation__checkbox:checked + .navigation__checkbox__button .navigation__checkbox__icon:after {
-  top: 0;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+    &:checked + &__button &__icon:after {
+      top: 0;
+      transform: rotate(-45deg);
+    }*/
 }
 
 .navigation__button {
@@ -3212,7 +3215,7 @@ p {
   top: 3.5rem;
   right: 3.5rem;
   background: radial-gradient(#51413c, #826b60);
-  opacity: 0.95;
+  opacity: 0.85;
   z-index: 1000;
   -webkit-transition: -webkit-transform 0.8s;
   transition: -webkit-transform 0.8s;
@@ -3251,11 +3254,12 @@ p {
 }
 
 .navigation__link:link, .navigation__link:visited {
+  display: inline-block;
   color: #e4dddb;
   text-decoration: none;
   background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #e4dddb 50%);
   padding: 1rem 2rem;
-  background-size: 220%;
+  background-size: 230%;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
@@ -3300,12 +3304,28 @@ p {
   top: 0.8rem;
 }
 
-.navigation__icon__button:hover .navigation__icon__icon:before {
+.navigation__button:hover .navigation__icon:before {
   top: -1rem;
 }
 
-.navigation__icon__button:hover .navigation__icon__icon:after {
+.navigation__button:hover .navigation__icon:after {
   top: 1rem;
+}
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon {
+  background-color: transparent;
+}
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon:before {
+  top: 0;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon:after {
+  top: 0;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
 }
 
 input[type="checkbox"]:checked ~ .navigation__background {
@@ -3317,10 +3337,4 @@ input[type="checkbox"]:checked ~ .navigation__nav {
   opacity: 1;
   width: 100%;
 }
-
-/*.navigation__checkbox:checked + .header__heading-wrapper{
-  transform: translate(0px, -400px);
-  color: red;
-  display: none;
-}*/
 /*# sourceMappingURL=main.css.map */
