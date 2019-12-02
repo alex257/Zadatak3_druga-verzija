@@ -17,14 +17,18 @@
   },
   "homepage": "https://github.com/alex257/Zadatak3_druga-verzija#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.3",
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-clean-css": "^4.0.0",
+    "autoprefixer": "^9.7.3",
+    "browser-sync": "^2.26.7",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
     "gulp-copy": "^4.0.1",
     "gulp-minify": "^3.1.0",
+    "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
-    "gulp-terser": "^1.1.7"
-  }
+    "gulp-terser": "^1.2.0"
+  },
+  "dependencies": {}
 }
