@@ -253,24 +253,12 @@ p {
     font-family: "Lora Bold";
     font-size: 1.5rem;
     font-weight: 300;
-    color: $accent;
+    //color: $accent;
     text-transform: uppercase;
 
-    @include mQ($md) {
+    /*@include mQ($md) {
       //font-size: 14px;
-    }
-
-    &--past {
-      color: $white;
-    }
-
-    &--city {
-      margin-top: -2.7rem;
-    }
-
-    &--active {
-      color: $black;
-    }
+    }*/
   }
 }
 

@@ -51,18 +51,17 @@
     margin-left: 26rem;
   }
 
+  &__dot-wrapper {
+    //color: $accent;
+  }
+
   &__dot {
     width: 13px;
     height: 13px;
-    background-color: $accent;
+    background-color: currentColor;
+    //color: inherit;
     border-radius: 50%;
     margin-left: 1.6rem;
-    &--past {
-      background-color: $white;
-    }
-    &--active {
-      background-color: $black;
-    }
   }
 
   &__timetable {
@@ -77,10 +76,20 @@
   &__date-column {
     //margin-right: -20px;
     margin-bottom: -2.1rem;
+    color: $accent;
+
+    &--past {
+      color: $white;
+    }
 
     &--active {
       margin-bottom: -3px;
       margin-top: 1.8rem;
+      color: $black;
+    }
+    
+    &--future{
+      color: $accent;
     }
   }
 
@@ -182,6 +191,11 @@
     }
   }
 
+  &__dates {
+    &--city {
+      margin-top: -2.7rem;
+    }
+  }
   &__dots--mini {
     margin-top: -2.9rem;
     margin-bottom: -2.3rem;
@@ -211,11 +225,9 @@
       @include mQ(1550px) {
         margin-right: 12px;
       }
-
       @include mQ($lg) {
         margin-right: 11px;
       }
-
       @include mQ($md) {
         margin-right: 11px;
       }
@@ -242,21 +254,17 @@
       @include mQ(900px) {
         margin-right: 9px;
       }
-
       @include mQ(790px) {
         margin-right: 8px;
       }
-
       @include mQ(720px) {
         margin-right: 6px;
       }
-
       @include mQ(670px) {
         width: 1px;
         height: 1px;
         margin-right: 4px;
       }
-
       @include mQ(550px) {
         margin-right: 4px;
       }

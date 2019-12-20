@@ -87,6 +87,7 @@
   &__image {
     width: auto;
     margin-left: 16.2rem;
+    filter: sepia(50%);
 
     @include mQ(1700px) {
       margin-left: 0px;
@@ -104,16 +105,6 @@
     bottom: 22.3%;
     right: 0%;
 
-    &:nth-of-type(5) {
-      //
-    }
-
-    &:nth-of-type(2),
-    &:nth-of-type(5) {
-      @include mQ($lg) {
-        //
-      }
-    }
 
     @include mQ(1700px) {
       bottom: 15%;
