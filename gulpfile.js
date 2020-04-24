@@ -63,12 +63,12 @@ function copyFonts() {
     .pipe(gulp.dest("dist/fonts"));
 }
 
-function copyCss() {
+/*function copyCss() {
   return gulp
     .src("src/css/*.css")
     .pipe(gulp.dest("dist/css"))
     .pipe(browserSync.stream());
-}
+}*/
 
 function watch() {
   browserSync.init({
@@ -80,7 +80,8 @@ function watch() {
   gulp.watch("src/*.html", copyHtml);
   gulp.watch("src/img/*.{gif,jpg,png,svg}", copyImages);
   gulp.watch("src/fonts/*.{txt,woff,woff2,ttf}", copyFonts);
-  gulp.watch("src/css/*.css", copyCss);
+  /*gulp.watch("src/css/*.css", copyCss);*/
+  gulp.watch("src/js/**/*.js", js);
   gulp.watch("src/js/*.js").on("change", browserSync.reload);
 }
 
@@ -90,7 +91,7 @@ exports.watch = watch;
 exports.copyHtml = copyHtml;
 exports.copyImages = copyImages;
 exports.copyFonts = copyFonts;
-exports.copyCss = copyCss;
+//exports.copyCss = copyCss;
 
 // exports.default = build;
 
@@ -100,8 +101,7 @@ const build = gulp.parallel(
   watch,
   copyHtml,
   copyImages,
-  copyFonts,
-  copyCss,
+  copyFonts
 );
 
 gulp.task(build);
